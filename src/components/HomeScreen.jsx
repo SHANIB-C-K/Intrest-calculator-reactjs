@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tilt from "react-parallax-tilt";
 
 const HomeScreen = () => {
   const [Money, setMoney] = useState("");
