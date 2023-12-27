@@ -6,18 +6,10 @@ const HomeScreen = () => {
   const [Year, setYear] = useState("");
   const [Intrest, setIntrest] = useState(0);
 
-  const intrestCalculator = (e) => {
-    e.preventDefault();
-    if (!Money) {
-      alert("Please enter the amount of money you want to invest");
-    } else {
-      setIntrest((Money * Percentage * Year) / 100);
-    }
-  };
   return (
     <>
       <div className="h-screen w-screen flex justify-center items-center">
-        <div className="bg-white h-96 w-96 bg-opacity-30 rounded-2xl flex flex-col items-center justify-center">
+        <div className="bg-white h-auto w-96 bg-opacity-30 rounded-2xl flex flex-col items-center justify-center py-3 pb-5">
           <div className="font-bold text-2xl text-white">
             Intrest Calculator
           </div>
@@ -29,10 +21,12 @@ const HomeScreen = () => {
                 for="Money"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                ₹ Principle Amount
+                ₹ Amount
               </label>
               <input
-                type="₹ Principle Amount"
+                value={Money || ""}
+                onChange={(e) => setMoney(e.target.value)}
+                type="₹ Amount"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter your Money"
                 required
@@ -47,6 +41,8 @@ const HomeScreen = () => {
                 Rate of Interest (P.A)%
               </label>
               <input
+                value={Percentage}
+                onChange={(e) => setPercentage(e.target.value)}
                 type="number"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Rate of Interest (P.A)%"
@@ -62,6 +58,8 @@ const HomeScreen = () => {
                 Time Period (Year)
               </label>
               <input
+                value={Year}
+                onChange={(e) => setYear(e.target.value)}
                 type="number"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Rate of Interest (P.A)%"
