@@ -6,6 +6,16 @@ const HomeScreen = () => {
   const [Year, setYear] = useState("");
   const [Intrest, setIntrest] = useState(0);
 
+  const intrestCalculator = (e) => {
+    e.preventDefault();
+
+    if (!Money || !Percentage || !Year) {
+      alert("Please enter a values");
+    } else {
+      setIntrest((Money * Percentage * Year) / 100);
+    }
+  };
+
   return (
     <>
       <div className="h-screen w-screen flex justify-center items-center">
