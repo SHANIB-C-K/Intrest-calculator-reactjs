@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import { TypeAnimation } from 'react-type-animation';
 
 const HomeScreen = () => {
   const [Money, setMoney] = useState("");
