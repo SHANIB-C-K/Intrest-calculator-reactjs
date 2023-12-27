@@ -71,7 +71,7 @@ const HomeScreen = () => {
               <div className="pb-4"></div>
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  className Rate of Interest (P.A)%
+                  Rate of Interest (P.A)%
                 </label>
                 <input
                   value={Percentage}
