@@ -5,5 +5,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 .calc-btn {
-  @apply cursor-pointer font-bold rounded-full px-5 py-1 bg-green-800 bg-opacity-50 hover:bg-green-900 hover:bg-opacity-80;
+  @apply cursor-pointer font-bold rounded-lg px-5 py-1 bg-green-800 bg-opacity-50 hover:bg-green-700 hover:bg-opacity-80;
 }
