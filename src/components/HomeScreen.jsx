@@ -16,17 +16,26 @@ const HomeScreen = () => {
     }
   };
 
+  const ReswtForm = () => {
+    setMoney("");
+    setPercentage("");
+    setYear("");
+    setIntrest(0);
+  };
+
   return (
     <>
       <div className="h-screen w-screen flex justify-center items-center">
         <div className="bg-black h-auto w-96 bg-opacity-80 rounded-2xl flex flex-col items-center justify-center py-3 pb-5 shadow-5xl shadow-blue-950">
-          <div className="font-bold text-2xl text-white pt-3">
+          <div className="font-bold text-2xl text-white pt-3 pb-4">
             Intrest Calculator
           </div>
-          <div className="font-bold text-green-700 text-4xl">₹ {Intrest}</div>
-          <p className="text-lg text-red-500 font-bold pt-3">
-            Calculate Your Simple Interest Easily
-          </p>
+          <div className="bg-gray-400 bg-opacity-20 rounded-2xl flex flex-col items-center justify-center w-80">
+            <div className="font-bold text-green-700 text-4xl">₹ {Intrest}</div>
+            <p className="text-lg text-red-500 font-bold pt-3">
+              Calculate Your Simple Interest Easily
+            </p>
+          </div>
           <form onSubmit={intrestCalculator}>
             <div className="pb-4"></div>
             <div>
