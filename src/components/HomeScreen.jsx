@@ -81,7 +81,9 @@ const HomeScreen = () => {
             </div>
             <div className="pt-5 flex flex-row">
               <button className="calc-btn">Calculate</button>
-              <button>Reset</button>
+              <div className="pl-3">
+                <button className="reset-btn">Reset</button>
+              </div>
             </div>
           </form>
         </div>
