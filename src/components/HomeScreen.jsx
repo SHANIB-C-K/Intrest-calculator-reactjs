@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 const HomeScreen = () => {
   const [Money, setMoney] = useState("");
@@ -38,7 +38,19 @@ const HomeScreen = () => {
                 ₹ {Intrest}
               </div>
               <p className="text-lg text-red-500 font-bold pt-3">
-                Calculate Your Simple Interest Easily
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "Hey, Hello",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "Calculate Your Simple Interest Easily",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ fontSize: "1em", display: "inline-block" }}
+                  repeat={Infinity}
+                />
               </p>
             </div>
             <form onSubmit={intrestCalculator}>
