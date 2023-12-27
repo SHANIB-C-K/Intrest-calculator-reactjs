@@ -16,7 +16,7 @@ const HomeScreen = () => {
     }
   };
 
-  const ReswtForm = () => {
+  const ResetForm = () => {
     setMoney("");
     setPercentage("");
     setYear("");
@@ -91,7 +91,9 @@ const HomeScreen = () => {
             <div className="pt-5 flex flex-row">
               <button className="calc-btn">Calculate</button>
               <div className="pl-3">
-                <button className="reset-btn">Reset</button>
+                <button className="reset-btn" onClick={ResetForm}>
+                  Reset
+                </button>
               </div>
             </div>
           </form>
