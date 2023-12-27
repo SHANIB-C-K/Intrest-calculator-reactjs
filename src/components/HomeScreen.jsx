@@ -30,7 +30,7 @@ const HomeScreen = () => {
           <div className="font-bold text-2xl text-white pt-3 pb-4">
             Intrest Calculator
           </div>
-          <div className="bg-gray-400 bg-opacity-20 rounded-2xl flex flex-col items-center justify-center w-80">
+          <div className="bg-gray-400 bg-opacity-20 rounded-2xl flex flex-col items-center justify-center w-80 shadow-2xl shadow-red-900">
             <div className="font-bold text-green-700 text-4xl">₹ {Intrest}</div>
             <p className="text-lg text-red-500 font-bold pt-3">
               Calculate Your Simple Interest Easily
