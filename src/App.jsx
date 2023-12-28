@@ -1,7 +1,10 @@
+// THis is importing section
 import React from "react";
+import HomeScreen from "./components/HomeScreen";
 import HomeScreen from "./components/HomeScreen";
 
 function App() {
+  // background image adding section
   const BgImg = {
     backgroundImage:
       "url(" +
@@ -15,6 +18,7 @@ function App() {
   return (
     <>
       <div style={BgImg}>
+        {/* This is HomeScreen page */}
         <HomeScreen />
       </div>
     </>
