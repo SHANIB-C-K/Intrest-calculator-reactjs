@@ -1,13 +1,18 @@
+// This is importing section
+
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { TypeAnimation } from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
 
 const HomeScreen = () => {
+  // This is useState created section
   const [Money, setMoney] = useState("");
   const [Percentage, setPercentage] = useState("");
   const [Year, setYear] = useState("");
   const [Intrest, setIntrest] = useState(0);
 
+  // This is intrest calculating function section
   const intrestCalculator = (e) => {
     e.preventDefault();
 
@@ -18,6 +23,7 @@ const HomeScreen = () => {
     }
   };
 
+  // This is ResetForm function creating section
   const ResetForm = () => {
     setMoney("");
     setPercentage("");
@@ -28,6 +34,7 @@ const HomeScreen = () => {
   return (
     <>
       <div className="h-screen w-screen flex justify-center items-center">
+        {/* This is hover animation section */}
         <Tilt>
           <div className="bg-black h-auto w-96 bg-opacity-80 rounded-2xl flex flex-col items-center justify-center py-3 pb-5 shadow-5xl shadow-blue-950">
             <div className="font-bold text-2xl text-white pt-3 pb-4 gap-4">
@@ -38,6 +45,7 @@ const HomeScreen = () => {
                 ₹ {Intrest}
               </div>
               <p className="text-lg text-red-500 font-bold pt-3">
+                {/* This is TypeAnimation section */}
                 <TypeAnimation
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
